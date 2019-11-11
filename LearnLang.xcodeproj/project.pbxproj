@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		375298B7236B828100713EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375298B6236B828100713EC6 /* AppDelegate.swift */; };
-		375298B9236B828100713EC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375298B8236B828100713EC6 /* SceneDelegate.swift */; };
 		375298BB236B828100713EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375298BA236B828100713EC6 /* ViewController.swift */; };
 		375298BE236B828100713EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375298BC236B828100713EC6 /* Main.storyboard */; };
 		375298C0236B828600713EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375298BF236B828600713EC6 /* Assets.xcassets */; };
 		375298C3236B828600713EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375298C1236B828600713EC6 /* LaunchScreen.storyboard */; };
+		376BB238237619790043781A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BB237237619790043781A /* SceneDelegate.swift */; };
+		37880CB72370D3C300AA1222 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 37880CB62370D3C300AA1222 /* ImageClassifier.mlmodel */; };
+		37880CB92370D41100AA1222 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 37880CB82370D41100AA1222 /* Scene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		375298B3236B828100713EC6 /* LearnLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		375298B6236B828100713EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		375298B8236B828100713EC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		375298BA236B828100713EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		375298BD236B828100713EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		375298BF236B828600713EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		375298C2236B828600713EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		375298C4236B828600713EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376BB237237619790043781A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		37880CB62370D3C300AA1222 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		37880CB82370D41100AA1222 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,14 @@
 		375298B5236B828100713EC6 /* LearnLang */ = {
 			isa = PBXGroup;
 			children = (
+				37880CB62370D3C300AA1222 /* ImageClassifier.mlmodel */,
 				375298B6236B828100713EC6 /* AppDelegate.swift */,
-				375298B8236B828100713EC6 /* SceneDelegate.swift */,
+				376BB237237619790043781A /* SceneDelegate.swift */,
 				375298BA236B828100713EC6 /* ViewController.swift */,
 				375298BC236B828100713EC6 /* Main.storyboard */,
 				375298BF236B828600713EC6 /* Assets.xcassets */,
 				375298C1236B828600713EC6 /* LaunchScreen.storyboard */,
+				37880CB82370D41100AA1222 /* Scene.sks */,
 				375298C4236B828600713EC6 /* Info.plist */,
 			);
 			path = LearnLang;
@@ -127,6 +133,7 @@
 			files = (
 				375298C3236B828600713EC6 /* LaunchScreen.storyboard in Resources */,
 				375298C0236B828600713EC6 /* Assets.xcassets in Resources */,
+				37880CB92370D41100AA1222 /* Scene.sks in Resources */,
 				375298BE236B828100713EC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +147,8 @@
 			files = (
 				375298BB236B828100713EC6 /* ViewController.swift in Sources */,
 				375298B7236B828100713EC6 /* AppDelegate.swift in Sources */,
-				375298B9236B828100713EC6 /* SceneDelegate.swift in Sources */,
+				37880CB72370D3C300AA1222 /* ImageClassifier.mlmodel in Sources */,
+				376BB238237619790043781A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLN3V396K;
 				INFOPLIST_FILE = LearnLang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLN3V396K;
 				INFOPLIST_FILE = LearnLang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

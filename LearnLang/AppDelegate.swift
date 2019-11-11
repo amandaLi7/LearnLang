@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xinyue Amanda Li. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,4 +34,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
+*/
