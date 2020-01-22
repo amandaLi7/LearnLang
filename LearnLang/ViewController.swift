@@ -23,43 +23,49 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet weak var languagePicker: UISegmentedControl!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         sceneView.delegate = self
-        
-        //let scene = SKScene()
-        
+    
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
         
-        languagePicker = UISegmentedControl(items: languages)
-        languagePicker.addTarget(self, action: #selector(languageChosen), for: .valueChanged)
+        //languagePicker = UISegmentedControl(items: languages)
+        //languagePicker.addTarget(self, action: #selector(languageChosen), for: .valueChanged)
         self.view.addSubview(languagePicker)
+        sceneView.bringSubviewToFront(languagePicker)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
         view.addGestureRecognizer(tapGesture)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = [.horizontal, .vertical]
+        sceneView.session.run(configuration)
     }
     
-    @objc func languageChosen(){
-        let idx = languagePicker.selectedSegmentIndex
-        let lang = (idx == UISegmentedControl.noSegment) ? "none" : languages[idx]
-        if lang == "Spanish"{
-            engSpanOrChinese = 1
-        } else if lang == "Chinese"{
-            engSpanOrChinese = 2
-        } else if lang == "English"{
-            engSpanOrChinese = 0
-        } else {
-            return
+    @IBAction func languageChosen(_ sender: Any) {
+        switch languagePicker.selectedSegmentIndex
+        {
+        case 0:
+            engSpanOrChinese = 0;
+            break
+        case 1:
+            engSpanOrChinese = 1;
+            break
+        case 2:
+            engSpanOrChinese = 2;
+            break
+        default:
+            engSpanOrChinese = 0;
+            break
         }
     }
     
-    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+    
+    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) -> SKNode?{
         // HIT TEST : REAL WORLD
         // Get Screen Centre
         let spriteNode = SKLabelNode(text: "")
@@ -86,9 +92,39 @@ class ViewController: UIViewController, ARSKViewDelegate {
             spriteNode.horizontalAlignmentMode = .center
             spriteNode.verticalAlignmentMode = .center
         }
+        return spriteNode
     }
     
-    public func getPredictionFromModel(cvbuffer: CVPixelBuffer?){
+    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
+        // Create and configure a node for the anchor added to the view's session.
+        let spriteNode = SKLabelNode(text: "")
+        spriteNode.fontColor = UIColor(red: 0.2, green: 0.6, blue: 0.9, alpha: 1)
+        spriteNode.fontName = "Helvetica-Bold"
+        spriteNode.isUserInteractionEnabled = true
+        let pixbuff: CVPixelBuffer? = sceneView.session.currentFrame?.capturedImage
+        if pixbuff != nil {
+            getPredictionFromModel(cvbuffer: pixbuff!)
+            spriteNode.text = "\(mlpredictiontext)"
+            if mlpredictiontext == "curtain:window shade"{
+                let audio = SKAction.playSoundFileNamed("curtain,window shade.m4a", waitForCompletion: false)
+                spriteNode.run(audio)
+
+            } else {
+                let audio = SKAction.playSoundFileNamed("\(mlpredictiontext).m4a", waitForCompletion: false)
+                spriteNode.run(audio)
+
+            }
+            spriteNode.horizontalAlignmentMode = .center
+            spriteNode.verticalAlignmentMode = .center
+        } else {
+            spriteNode.text = "FAILED!"
+            spriteNode.horizontalAlignmentMode = .center
+            spriteNode.verticalAlignmentMode = .center
+        }
+        return spriteNode
+    }
+    
+    func getPredictionFromModel(cvbuffer: CVPixelBuffer?){
         do {
             let object = try model.prediction(image: cvbuffer!)
             let objInEng = object.classLabel
@@ -117,3 +153,13 @@ class ViewController: UIViewController, ARSKViewDelegate {
 
 }
 
+/*public class Scene: SKScene {
+    
+    public override required init(size:CGSize) {
+        super.init(size:size)
+    }
+    
+    public required init(coder: NSCoder) {
+        super.init(coder:coder)!
+    }
+}*/

@@ -15,21 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arskView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-S4-DiH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </arskView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-jO-RB2">
-                                <rect key="frame" x="20" y="44" width="160" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-jO-RB2">
+                                <rect key="frame" x="20" y="44" width="181" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="2sT-2U-AkQ"/>
                                     <constraint firstAttribute="width" constant="160" id="XNm-al-3LG"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="English"/>
+                                    <segment title="Spanish"/>
+                                    <segment title="Chinese"/>
                                 </segments>
+                                <connections>
+                                    <action selector="languageChosen:" destination="BYZ-38-t0r" eventType="valueChanged" id="GtA-lQ-fHR"/>
+                                </connections>
                             </segmentedControl>
+                            <arskView contentMode="scaleToFill" fixedFrame="YES" sceneName="Scene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-S4-DiH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arskView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -39,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="languagePicker" destination="8ih-jO-RB2" id="KLc-3b-Nbi"/>
+                        <outlet property="languagePicker" destination="8ih-jO-RB2" id="zRB-Mf-g87"/>
                         <outlet property="sceneView" destination="f3X-S4-DiH" id="C60-cR-F33"/>
                     </connections>
                 </viewController>

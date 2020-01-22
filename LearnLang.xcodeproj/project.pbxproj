@@ -13,6 +13,8 @@
 		375298C0236B828600713EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375298BF236B828600713EC6 /* Assets.xcassets */; };
 		375298C3236B828600713EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375298C1236B828600713EC6 /* LaunchScreen.storyboard */; };
 		376BB238237619790043781A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BB237237619790043781A /* SceneDelegate.swift */; };
+		377A149323C7D2B200DB41A2 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377A149223C7D2B200DB41A2 /* ARKit.framework */; };
+		377A149523C7D2BA00DB41A2 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377A149423C7D2BA00DB41A2 /* SpriteKit.framework */; };
 		37880CB72370D3C300AA1222 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 37880CB62370D3C300AA1222 /* ImageClassifier.mlmodel */; };
 		37880CB92370D41100AA1222 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 37880CB82370D41100AA1222 /* Scene.sks */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,27 @@
 		375298C2236B828600713EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		375298C4236B828600713EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376BB237237619790043781A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		377A149223C7D2B200DB41A2 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		377A149423C7D2BA00DB41A2 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		377A149623C7DC2F00DB41A2 /* backpack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = backpack.m4a; sourceTree = "<group>"; };
+		377A149723C7DC4000DB41A2 /* bookcase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bookcase.m4a; sourceTree = "<group>"; };
+		377A149823C7DC5600DB41A2 /* calculator.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = calculator.m4a; sourceTree = "<group>"; };
+		377A149923C7DC6200DB41A2 /* carpet.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = carpet.m4a; sourceTree = "<group>"; };
+		377A149A23C7DC7100DB41A2 /* clock.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = clock.m4a; sourceTree = "<group>"; };
+		377A149B23C7DC7E00DB41A2 /* computer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = computer.m4a; sourceTree = "<group>"; };
+		377A149D23C7DCB600DB41A2 /* curtain_window shade.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "curtain_window shade.m4a"; sourceTree = "<group>"; };
+		377A149E23C7DCCE00DB41A2 /* door.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = door.m4a; sourceTree = "<group>"; };
+		377A149F23C7DCE300DB41A2 /* drinking cup.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "drinking cup.m4a"; sourceTree = "<group>"; };
+		377A14A023C81BFF00DB41A2 /* floor.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = floor.m4a; sourceTree = "<group>"; };
+		377A14A123C81C1000DB41A2 /* lamp.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = lamp.m4a; sourceTree = "<group>"; };
+		377A14A223C81C2100DB41A2 /* notebook.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = notebook.m4a; sourceTree = "<group>"; };
+		377A14A323C81C2C00DB41A2 /* paper.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = paper.m4a; sourceTree = "<group>"; };
+		377A14A423C81C3800DB41A2 /* pencil.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pencil.m4a; sourceTree = "<group>"; };
+		377A14A523C81C4D00DB41A2 /* phone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = phone.m4a; sourceTree = "<group>"; };
+		377A14A623C81C5700DB41A2 /* shoe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shoe.m4a; sourceTree = "<group>"; };
+		377A14A723C81C6400DB41A2 /* wall.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wall.m4a; sourceTree = "<group>"; };
+		377A14A823C81C7100DB41A2 /* watch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = watch.m4a; sourceTree = "<group>"; };
+		377A14A923C81C7B00DB41A2 /* water bottle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "water bottle.m4a"; sourceTree = "<group>"; };
 		37880CB62370D3C300AA1222 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		37880CB82370D41100AA1222 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377A149523C7D2BA00DB41A2 /* SpriteKit.framework in Frameworks */,
+				377A149323C7D2B200DB41A2 /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +71,7 @@
 			children = (
 				375298B5236B828100713EC6 /* LearnLang */,
 				375298B4236B828100713EC6 /* Products */,
+				377A149123C7D2B200DB41A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +95,36 @@
 				375298C1236B828600713EC6 /* LaunchScreen.storyboard */,
 				37880CB82370D41100AA1222 /* Scene.sks */,
 				375298C4236B828600713EC6 /* Info.plist */,
+				377A149623C7DC2F00DB41A2 /* backpack.m4a */,
+				377A149723C7DC4000DB41A2 /* bookcase.m4a */,
+				377A149823C7DC5600DB41A2 /* calculator.m4a */,
+				377A149923C7DC6200DB41A2 /* carpet.m4a */,
+				377A149A23C7DC7100DB41A2 /* clock.m4a */,
+				377A149B23C7DC7E00DB41A2 /* computer.m4a */,
+				377A149D23C7DCB600DB41A2 /* curtain_window shade.m4a */,
+				377A149E23C7DCCE00DB41A2 /* door.m4a */,
+				377A149F23C7DCE300DB41A2 /* drinking cup.m4a */,
+				377A14A023C81BFF00DB41A2 /* floor.m4a */,
+				377A14A123C81C1000DB41A2 /* lamp.m4a */,
+				377A14A223C81C2100DB41A2 /* notebook.m4a */,
+				377A14A323C81C2C00DB41A2 /* paper.m4a */,
+				377A14A423C81C3800DB41A2 /* pencil.m4a */,
+				377A14A523C81C4D00DB41A2 /* phone.m4a */,
+				377A14A623C81C5700DB41A2 /* shoe.m4a */,
+				377A14A723C81C6400DB41A2 /* wall.m4a */,
+				377A14A823C81C7100DB41A2 /* watch.m4a */,
+				377A14A923C81C7B00DB41A2 /* water bottle.m4a */,
 			);
 			path = LearnLang;
+			sourceTree = "<group>";
+		};
+		377A149123C7D2B200DB41A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				377A149423C7D2BA00DB41A2 /* SpriteKit.framework */,
+				377A149223C7D2B200DB41A2 /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLN3V396K;
 				INFOPLIST_FILE = LearnLang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JSLN3V396K;
 				INFOPLIST_FILE = LearnLang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
